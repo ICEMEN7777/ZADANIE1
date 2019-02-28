@@ -1,21 +1,18 @@
-<?php
+<h1>Страница учета дней рождения организации</h1>
 
-namespace app\models;
+<?= GridView::widget([
+    'dataProvider' => $dataProvider,
+    'columns' => [
+        ['class' => 'yii\grid\SerialColumn'],
 
+        'id',
+        'surname:ntext',
+        'name:ntext',
+        'patronymic:ntext',
+        'birthday',
+// 'created_at',
+// 'updated_at',
 
-
-
-
-
-use yii\db\ActiveRecord;
-
-class Comments extends  ActiveRecord {
-
-
-}
-
-
-
-
-
-
+        ['class' => 'yii\grid\ActionColumn'],
+    ],
+]); ?>
